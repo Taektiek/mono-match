@@ -1,6 +1,6 @@
 from random import shuffle
 
-with open('emoji.txt', mode='r') as emoji_txt:
+with open('py/emoji.txt', mode='r') as emoji_txt:
     emoji_encoded = set()
     for i in emoji_txt.read().split('\n'):
         emoji_encoded.add(i)
@@ -59,7 +59,7 @@ def generate_combinations(number_of_symbols, shuffle_symbols):
 
     return real_cards
 
-combinations = generate_combinations(24, True)
+combinations = generate_combinations(20, True)
 
-with open('cards.txt', 'w', encoding="utf-8") as cards_txt:
+with open('py/cards.txt', 'w', encoding="utf-8") as cards_txt:
     cards_txt.write('<div class="row hidden">' + '</div><div class="row hidden">'.join([''.join([f'<div class="emoji">{i}</div>' for i in combination]) for combination in combinations]) + '</div>')
