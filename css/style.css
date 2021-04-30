@@ -36,8 +36,8 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(223,226,233,1) 50%, rgba(255,255,255,1) 100%);
+    background-image: url("https://unsplash.com/photos/UiiHVEyxtyA/download?force=true");
+    background-size: cover;
 
     font-family: Helvetica, sans-serif;
 }
@@ -45,7 +45,10 @@ body {
 h1 {
     text-align: center;
     font-size: 64px;
-    color:darkgray;
+    color:rgb(255, 255, 255);
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.35));
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 .emojis {
@@ -59,7 +62,8 @@ h1 {
     font-family: "Noto Color Emoji";
     margin: 2px;
     padding: 2px;
-    border-bottom: 3px solid lightgray ;
+    border-bottom: 3px solid white ;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.15));
     border-radius: 3px;
 
     display: flex;
@@ -68,14 +72,19 @@ h1 {
 .emoji {
     cursor: pointer;
     filter: drop-shadow(5px 5px 5px hsl(0, 0%, 25%, 25%));
+    transition-duration: 500ms;
+}
+
+.emoji:hover {
+    background-color: lightgray;
 }
 
 .emoji.selected {
     background-color: limegreen;
 }
 
-.emoji:hover {
-    background-color: lightgray;
+.emoji.selected:hover {
+    background-color: rgb(51, 255, 51);
 }
 
 .hidden {
