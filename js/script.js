@@ -5,7 +5,6 @@ $(document).ready(function(){
     $(".emojis").children()[1].classList.remove("hidden")
     $(".emoji").click(function(){
         $(this).parent().children().each(function(){
-            // this.removeClass("selected")
             this.classList.remove("selected")
             var index = selected.indexOf(this)
             if (index !== -1) selected.splice(index, 1)

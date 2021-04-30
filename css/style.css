@@ -5,6 +5,28 @@
   src: url(https://gitcdn.xyz/repo/googlefonts/noto-emoji/master/fonts/NotoColorEmoji.ttf);
 }
 
+@media screen and (max-width: 1199px) {
+    .emojis {
+        flex-direction: row;
+    }
+
+    .row {
+        flex-direction: column;
+        font-size: 3vh;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .emojis {
+        flex-direction: column;
+    }
+
+    .row {
+        flex-direction: row;
+        font-size: 2.5vw;
+    }
+}
+
 html, body {
     width: 100%;
     height: 100%;
@@ -14,19 +36,19 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(223,226,233,1) 50%, rgba(255,255,255,1) 100%);
 }
 
 .emojis {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     flex-wrap: wrap;
 }
 
 .row {
     font-family: "Noto Color Emoji";
-    font-size: 2.5vw;
     margin: 2px;
     padding: 2px;
     border-bottom: 3px solid lightgray ;
@@ -37,6 +59,7 @@ body {
 
 .emoji {
     cursor: pointer;
+    filter: drop-shadow(5px 5px 5px hsl(0, 0%, 25%, 25%));
 }
 
 .emoji.selected {
