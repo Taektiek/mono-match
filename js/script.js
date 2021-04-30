@@ -18,11 +18,13 @@ $(document).ready(function(){
         }
         if (selected.length === 2) {
             if (selected[0].innerText === selected[1].innerText) {
-                selected[0].parentNode.remove()
-                selected[1].parentNode.remove()
-                $(".emojis").children()[0].classList.remove("hidden")
+                $(".emojis").children()[0].remove()
                 $(".emojis").children()[1].classList.remove("hidden")
                 $(".score").text((parseInt($(".score").text())+1).toString())
+                selected.forEach(function(item){
+                    item.classList.remove("selected")
+                })
+                selected = [];
             }
         }
     })
