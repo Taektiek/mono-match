@@ -1,0 +1,52 @@
+@import url(//db.onlinewebfonts.com/c/5ab304ade0d4f62d027d12464ca69443?family=Apple+Color+Emoji);
+
+@font-face {
+  font-family: 'Noto Color Emoji';
+  src: url(https://gitcdn.xyz/repo/googlefonts/noto-emoji/master/fonts/NotoColorEmoji.ttf);
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.emojis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.row {
+    font-family: "Noto Color Emoji";
+    font-size: 2.5vw;
+    margin: 2px;
+    padding: 2px;
+    border-bottom: 3px solid lightgray ;
+    border-radius: 3px;
+
+    display: flex;
+}
+
+.emoji {
+    cursor: pointer;
+}
+
+.emoji.selected {
+    background-color: limegreen;
+}
+
+.emoji:hover {
+    background-color: lightgray;
+}
+
+.hidden {
+    display: none;
+}
