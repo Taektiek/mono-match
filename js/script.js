@@ -22,6 +22,7 @@ $(document).ready(function(){
                 selected[1].parentNode.remove()
                 $(".emojis").children()[0].classList.remove("hidden")
                 $(".emojis").children()[1].classList.remove("hidden")
+                $(".score").text((parseInt($(".score").text())+1).toString())
             }
         }
     })
