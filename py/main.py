@@ -26,7 +26,6 @@ def generate_combinations(number_of_symbols, shuffle_symbols):
         #Add n+1 symbols on the card (e.g. 8 symbols)
         for j in range(n):
             cards[i].append((j+1)+(i*n)+1)
-            print(f'Initializing card {i*j}/{numberOfCards}')
 
     #Add n sets of n cards 
     for i in range(0,n):
@@ -34,7 +33,6 @@ def generate_combinations(number_of_symbols, shuffle_symbols):
             #Append a new card with 1 symbol
             cards.append([i+2])
 
-            print(f'Filling card {i*j}/{numberOfCards}')
             #Add n symbols on the card (e.g. 7 symbols)
             for k in range(0,n):
                 val  = (n+1 + n*k + (i*k+j)%n)+1
@@ -43,7 +41,6 @@ def generate_combinations(number_of_symbols, shuffle_symbols):
     #Shuffle symbols on each card
     if shuffle_symbols:
         for card in cards:
-            print(f'Shuffling card {i*j}/{numberOfCards}')
             shuffle(card)
         
     #Output all cards  
